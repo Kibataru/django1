@@ -1,0 +1,5 @@
+<form method="post" action="/simple-post/">
+    {% csrf_token %}
+    <input type="text" name="example_field" required>
+    <input type="submit" value="Отправить">
+</form>

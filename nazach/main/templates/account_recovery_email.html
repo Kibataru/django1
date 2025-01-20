@@ -1,0 +1,6 @@
+Здравствуйте, {{ user.username }}!
+
+Для восстановления вашего аккаунта перейдите по ссылке:
+{{ protocol }}://{{ domain }}{% url 'recover_account' uidb64=uid token=token %}
+
+Спасибо!

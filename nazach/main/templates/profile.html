@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Профиль</h2>
+<p>Username: {{ user.username }}</p>
+<p>Email: {{ user.email }}</p>
+<p><a href="{% url 'edit_profile' %}">Редактировать аккаунт</a></p>
+<p><a href="{% url 'delete_account' %}">Удалить аккаунт</a></p>
+<p><a href="{% url 'password_reset' %}">Сбросить пароль</a></p>
+{% endblock %}

@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./nazach/nazach",
+        "./nazach/main"
+    ]
+}

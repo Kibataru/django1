@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная страница + 3 задание{% endblock %}
+
+{% block content %}
+<h1>Главная страница + 3 задание</h1>
+<form method="post" action="{% url 'get_name' %}">
+    {% csrf_token %}
+    <label for="name">Ваше имя:</label>
+    <input type="text" id="name" name="name">
+    <button type="submit">Отправить</button>
+    <h3>2-е задание</h3>
+
+    <p>
+        <a href="{% url 'mainpage' %}">index_GET</a>
+    </p>
+
+    <p>
+        <a href="{% url 'data' %}">data_GET</a>
+    </p>
+
+    <p>
+      <a href="{% url 'simple_post' %}">post_POST</a>
+   </p>
+
+    <p>
+    <a href="{% url 'user-list' %}">CRUD_list</a>
+    </p>
+
+    <p>
+        <a href="{% url 'user-create' %}">CRUD_Create</a>
+    </p>
+
+    <p>
+        <a href="{% url 'profile' %}">Профиль</a>
+    </p>
+
+</form>
+{% endblock %}
